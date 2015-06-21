@@ -637,19 +637,27 @@ body {
 .smallbreak {
   display: block; }
 
+/* line 13, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+.esvRefTooltip {
+  display: none; }
+
 @media (min-width: 40em) {
-  /* line 14, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+  /* line 18, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
   body {
     font-size: 1.5em; }
 
-  /* line 17, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+  /* line 21, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
   .nosmall {
     display: inline; }
 
-  /* line 20, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+  /* line 24, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
   .smallbreak {
-    display: inline; } }
-/* line 26, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+    display: inline; }
+
+  /* line 27, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+  .esvRefTooltip {
+    display: block; } }
+/* line 33, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
 .frame {
   -webkit-box-align: center;
   -moz-box-align: center;
@@ -676,16 +684,16 @@ body {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center; }
-  /* line 31, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+  /* line 38, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
   .frame #links {
     text-align: center;
     font-size: .75em;
     color: #666;
     margin-bottom: 4em; }
-  /* line 38, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+  /* line 45, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
   .frame .chapter-in {
     padding-left: 2em; }
-  /* line 42, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+  /* line 49, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
   .frame .container {
     text-align: center;
     max-width: 68em;
@@ -698,73 +706,73 @@ body {
       clear: both;
       content: "";
       display: table; }
-    /* line 48, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+    /* line 55, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
     .frame .container .chapter-title {
       text-align: center;
       color: #222;
       font-style: normal;
       font-size: 1.4em; }
-    /* line 55, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+    /* line 62, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
     .frame .container .chapter-section {
       font-size: 1em;
       color: #444;
       margin-bottom: 1em;
       text-transform: uppercase; }
-    /* line 62, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+    /* line 69, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
     .frame .container h4 {
       font-style: italic;
       color: #666;
       font-size: 1em;
       font-weight: normal;
       margin: 1em 0em 1.5em 0em; }
-    /* line 70, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+    /* line 77, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
     .frame .container #references {
       margin-top: 3em; }
-    /* line 71, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+    /* line 78, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
     .frame .container #footnotes {
       font-size: .85em; }
-      /* line 73, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+      /* line 80, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
       .frame .container #footnotes > div {
         text-indent: -1em;
         padding-left: 1em; }
-      /* line 77, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+      /* line 84, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
       .frame .container #footnotes p {
         padding: 0;
         margin-bottom: .5em; }
-    /* line 83, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+    /* line 90, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
     .frame .container blockquote {
       font-size: .8em;
       color: #444; }
-    /* line 87, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+    /* line 94, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
     .frame .container blockquote.full {
       font-size: 1em; }
-    /* line 91, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+    /* line 98, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
     .frame .container .number {
       float: left;
       font-size: 2.5em;
       margin: .3em .3em 0 0;
       text-indent: 0; }
-      /* line 96, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+      /* line 103, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
       .frame .container .number a {
         color: #b4b4b4;
         font-weight: bold; }
-    /* line 102, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+    /* line 109, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
     .frame .container .pg-link {
       color: #999; }
-    /* line 106, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+    /* line 113, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
     .frame .container .article-header {
       text-align: center;
       margin-bottom: 0; }
-      /* line 108, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+      /* line 115, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
       .frame .container .article-header h1.main-header {
         font-weight: 200;
         margin: 0; }
-      /* line 112, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+      /* line 119, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
       .frame .container .article-header h4.auth-header {
         color: #444;
         font-weight: 100;
         margin-bottom: .5em; }
-      /* line 117, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
+      /* line 124, /Users/jason/Dev/github/proteus-middleman/source/assets/stylesheets/_global.scss */
       .frame .container .article-header h2.sub-header {
         color: #444;
         font-weight: 100;
