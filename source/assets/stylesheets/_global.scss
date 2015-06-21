@@ -10,6 +10,10 @@ body {
   display:block;
 }
 
+.esvRefTooltip {
+  display:none;
+}
+
 @media (min-width: $medium-screen) {
   body {
     font-size:1.5em;
@@ -19,6 +23,9 @@ body {
   }
   .smallbreak {
     display:inline;
+  }
+  .esvRefTooltip {
+    display:block;
   }
 }
 
