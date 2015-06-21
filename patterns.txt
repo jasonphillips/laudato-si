@@ -1,0 +1,13 @@
+<p>(\d+)\.\s+(.*?)<\/p>
+
+%p#pg-$1\n  %span.number\n    %a(href="#pg-$1") $1\n  $2\n
+
+(\(|f\.|;)\s*<i>(\w+)\s*</i>\s*
+
+$1 $2 
+
+<p><b>(([A-Z]+)\..*)</b>\s*</p>
+
+%h3.chapter-section#chapter-5-$2 $1
+
+

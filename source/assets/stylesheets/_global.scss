@@ -1,19 +1,130 @@
 body {
-  background-color: $light-gray;
-  color: $medium-gray;
+  background-color: #fff;
+  color: #222;
+  font-size:1.25em;
+}
+.nosmall {
+  display:none;
+}
+.smallbreak {
+  display:block;
 }
 
-.delete-me {
+@media (min-width: $medium-screen) {
+  body {
+    font-size:1.5em;
+  }
+  .nosmall {
+    display:inline;
+  }
+  .smallbreak {
+    display:inline;
+  }
+}
+
+
+.frame {
   @include align-items(center);
   @include display(flex);
   @include justify-content(center);
-  height: 100vh;
+
+  #links {
+    text-align: center;
+    font-size: .75em;
+    color:#666;
+    margin-bottom:4em;
+  }
+
+  .chapter-in {
+    padding-left: 2em;
+  }
 
   .container {
     text-align: center;
+    @include outer-container;
+    max-width: 800px;
+    padding: 1em;
 
-    h1 {
-      font-weight: 200;
+    .chapter-title {
+      text-align: center;
+      color: #222;
+      font-style: normal;
+      font-size: 1.4em;
+    }
+
+    .chapter-section {
+      font-size: 1em;
+      color: #444;
+      margin-bottom: 1em;
+      text-transform: uppercase;
+    }
+
+    h4 {
+      font-style: italic;
+      color: #666;
+      font-size: 1em;
+      font-weight: normal;
+      margin: 1em 0em 1.5em 0em;
+    }
+
+    #references { margin-top: 3em; }
+    #footnotes {
+      font-size:.85em;
+      > div {
+        text-indent: -1em;
+        padding-left: 1em;
+      }
+      p  {
+        padding: 0;
+        margin-bottom: .5em;
+      }
+    }
+
+    blockquote {
+      font-size: .8em;
+      color: #444;
+    }
+    blockquote.full {
+      font-size: 1em;
+    }
+
+    .number {
+      float: left;
+      font-size: 2.5em;
+      margin: .3em .3em 0 0;
+      text-indent: 0;
+      a {
+        color: #b4b4b4;
+        font-weight: bold;
+      }
+    }
+
+    .pg-link {
+      color: #999;
+    }
+
+    .article-header {
+      text-align: center;
+      h1.main-header {
+        font-weight: 200;
+        margin:0;
+      }
+      h4.auth-header {
+        color:#444;
+        font-weight:100;
+        margin-bottom:.5em;
+      }
+      h2.sub-header {
+        color:#444;
+        font-weight:100;
+        font-style: normal;
+        margin: 0em;
+        line-height: 1.2em;
+      }
+      @media (min-width: $medium-screen) {
+
+      }
+      margin-bottom:0;
     }
   }
 }
