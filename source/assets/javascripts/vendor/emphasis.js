@@ -15,10 +15,10 @@
 	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 	copies of the Software, and to permit persons to whom the Software is
 	furnished to do so, subject to the following conditions:
-	
+
 	The above copyright notice and this permission notice shall be included in
 	all copies or substantial portions of the Software.
-	
+
 	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -30,7 +30,7 @@
 	-------------------------------------------------- */
 
 (function() {
-	
+
 	var Emphasis = {
 		init: function() {
 			this.config();
@@ -38,13 +38,14 @@
 			this.p	= false; // Paragraph Anchor
 			this.h	= false; // Highlighted paragraphs
 			this.s	= false; // Highlighted sentences
-			this.vu = false; // Are paragraph links visible or not
+			this.vu = true; // Are paragraph links visible or not
 			this.kh = "|";
 
 			this.addCSS();
+			this.paragraphList();
 			this.readHash();
 
-			document.addEventListener ("keydown", this.keydown);
+			//document.addEventListener ("keydown", this.keydown);
 		},
 
 		config: function() {
@@ -69,7 +70,7 @@
 			var st = document.createElement('style');
 			st.setAttribute('type', 'text/css');
 			/* for validation goodness */
-			var stStr = 'p.' + this.classActive + ' span { background-color:#f2f4f5; } p span.' + this.classHighlight + ' { background-color:#fff0b3; } span.' + this.classInfo + ' { position:absolute; margin:-1px 0px 0px -8px; padding:0; font-size:10px; background-color: transparent !important} span.' + this.classInfo + ' a { text-decoration: none; } a.' + this.classActiveAnchor + ' { color: #000; font-size: 11px; }';
+			var stStr = 'p.' + this.classActive + ' span { background-color:#f2f4f5; } p span.' + this.classHighlight + ' { background-color:#fff0b3; } span.' + this.classInfo + ' { position:absolute; margin:-1px 0px 0px -8px; padding:0; font-size:10px; background-color: transparent !important} span.' + this.classInfo + ' a { text-decoration: none; } a.' + this.classActiveAnchor + 'x { color: #000; font-size: 11px; }';
 			try {
 			/* try the sensible way */
 				st.innerHTML = stStr;
@@ -121,10 +122,11 @@
 				hi = (findh && findh.length>0) ? findh[1] : false;
 
 				if (hi) {
-					hi = hi.match(/[a-zA-Z]+(,[0-9]+)*/g);
+					hi = hi.match(/[a-zA-Z\-0-9]+(,[0-9]+)*/g);
 					for (i = 0; i < hi.length; i++) {
 						a	= hi[i].split(',');
 						key = a[0];
+						console.log(key);
 						pos = this.findKey(key).index;
 
 						if (pos !== undef) {
@@ -151,7 +153,7 @@
 		/*	Look for double-shift keypress */
 			var self = Emphasis,
 				kc = e.keyCode;
-		
+
 			self.kh	 = self.kh + kc + '|';
 			if (self.kh.indexOf('|16|16|')>-1) {
 				self.vu = (self.vu) ? false : true;
@@ -175,7 +177,11 @@
 			for (p=0; p<len; p++) {
 				pr = this.paraSelctors[p];
 				if ((pr.innerText || pr.textContent || "").length > 0) {
-					k = instance.createKey(pr);
+					if (pr.getAttribute('id')) {
+						k = pr.getAttribute('id');
+					} else {
+						k = instance.createKey(pr);
+					}
 					list.push(pr);
 					keys.push(k);
 					pr.setAttribute("data-key", k); // Unique Key
@@ -195,7 +201,7 @@
 
 		paragraphClick: function(e) {
 		/*	Clicking a Paragrsph has consequences for Highlighting, selecting and changing active Anchor */
-			if (!this.vu) { return; }
+			//if (!this.vu) { return; }
 
 			var self = Emphasis;
 			var hasChanged = false,
@@ -219,10 +225,10 @@
 			}
 
 			if (self.hasClass(pr, self.classReady)) {
-		
+
 				if (!self.hasClass(pr, self.classActive) && (sp && !self.hasClass(sp, self.classHighlight))) {
 
-				//	If not current Active p tag, clear any others out there and make this the Active p tag	
+				//	If not current Active p tag, clear any others out there and make this the Active p tag
 					self.removeAllWithClass(self.classActive);
 					self.addClass(pr, self.classActive);
 
@@ -384,7 +390,7 @@
 		goAnchor: function(p) {
 		/*	Move view to top of a given Paragraph */
 			if (!p) {
-				return; 
+				return;
 			}
 
 			var pg = (isNaN(p)) ? this.findKey(p)['elm'] : (this.paragraphList().list[p-1] || false);
@@ -448,7 +454,7 @@
 				list = (topList+","+geoList+","+numList+","+extList).split(","),
 				len  = list.length,
 				i, lines;
-		
+
 			for (i=0;i<len;i++) {
 				html = html.replace(new RegExp((" "+list[i]+"\\."), "g"), (" "+list[i]+d));
 			}
@@ -465,12 +471,12 @@
 				html = html.replace(new RegExp(("\\."+list[i]), "g"), (d+list[i]));
 			}
 
-			lines = this.cleanArray(html.split('. '));
+			lines = this.cleanArray(html.split(/\.(?=[<\s])/));
 			return lines;
 		},
 
 		ordinal: function(n) {
-			var sfx = ["th","st","nd","rd"], 
+			var sfx = ["th","st","nd","rd"],
 				val = n%100;
 			return n + (sfx[(val-20)%10] || sfx[val] || sfx[0]);
 		},
@@ -542,11 +548,11 @@
 			}
 			return true;
 		},
-		
+
 		removeFromDOM: function(el) {
 			el.parentNode.removeChild(el);
 		},
-		
+
 		toggleClass: function(el, klass) {
 			if (this.hasClass(el, klass)) {
 				this.removeClass(el, klass);

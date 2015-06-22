@@ -100,6 +100,7 @@ body {
       font-size: 2.5em;
       margin: .3em .3em 0 0;
       text-indent: 0;
+      background-color: transparent !important;
       a {
         color: #b4b4b4;
         font-weight: bold;
@@ -134,4 +135,9 @@ body {
       margin-bottom:0;
     }
   }
+}
+
+
+.emActiveAnchor {
+  color: black !important;
 }
