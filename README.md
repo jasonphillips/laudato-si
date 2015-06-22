@@ -7,7 +7,7 @@ This site offers a mirror of the
 repeated here merely for educational purposes. My hope is to better facilitate public reading of the
 encyclical by making it more accessible and convenient for online reading.
 
-Features:
+**Features:**
  - properly ordered headers
  - cleaner typography
  - responsive layout
@@ -16,11 +16,11 @@ Features:
 
 Improvements welcome via pull request.
 
-To do:
+**To do:**
  - [ ] build yaml document structure for TOC
  - [ ] deep linking https://github.com/jasonphillips/laudato-si/issues/1
 
-Welcome improvements:
+**Welcome improvements:**
  - alternate languages
  - style / typography
  - anything else that improves readibility
