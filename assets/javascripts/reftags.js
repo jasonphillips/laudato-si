@@ -1,1 +1,1 @@
-var refTagger={settings:{bibleReader:"bible.faithlife",bibleVersion:"ESV",tagChapters:!0}};!function(e,r){var t=e.createElement(r),a=e.getElementsByTagName(r)[0];t.src="//api.reftagger.com/v2/RefTagger.js",a.parentNode.insertBefore(t,a)}(document,"script");
+var refTagger={settings:{bibleReader:"bible.faithlife",bibleVersion:"ESV",tagChapters:!0}};
