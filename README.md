@@ -16,7 +16,27 @@ Features:
 
 Improvements welcome via pull request.
 
+To do:
+ - [ ] build yaml document structure for TOC
+ - [ ] deep linking https://github.com/jasonphillips/laudato-si/issues/1
+
 Welcome improvements:
  - alternate languages
  - style / typography
  - anything else that improves readibility
+
+## Development
+
+Site is developed with `middleman`. Commands:
+
+```bash
+# run preview site on localhost:4567
+$ middleman serve
+
+# build static site into build/ folder
+$ middleman build
+
+# rebuild and deploy to gh-pages branch
+$ middleman deploy
+```
+
