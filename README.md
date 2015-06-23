@@ -1,3 +1,5 @@
+## Note: this project will be primarily maintained at [encyclical/laudato-si](https://github.com/encyclical/laudato-si) going forward. 
+
 # Laudato Si’
 
 View the site on [Github Pages](http://jasonphillips.github.io/laudato-si/).
