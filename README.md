@@ -40,3 +40,7 @@ $ middleman build
 $ middleman deploy
 ```
 
+## Contributors
+
+- Jason Philips (@jasonphillips)
+
