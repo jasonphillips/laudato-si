@@ -336,6 +336,7 @@
 			hash	= (anchor + (h.replace("h[,", "h[") + "]")).replace(",h[]", "").replace("h[]", "");
 
 			location.hash = hash;
+			window.emphasisCallback();
 		},
 
 		createKey: function(p) {
@@ -399,6 +400,7 @@
 					window.scrollTo(0, pg.offsetTop);
 				}, 499);
 			}
+
 		},
 
 		goHighlight: function(h, s) {
@@ -438,6 +440,7 @@
 					this.addClass(para, 'emReady'); /* Mark the paragraph as having SPANs */
 				}
 			}
+
 		},
 
 		getSentences: function(el) {
