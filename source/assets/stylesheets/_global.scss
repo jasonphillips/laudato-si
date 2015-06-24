@@ -19,8 +19,11 @@ body {
     > * {
       float:right;
     }
-    img {
+    img, .shareLink {
       cursor: pointer;
+    }
+    .shareLink {
+      font-size: 2em;
     }
     #currentUrl {
       margin-bottom: 0;
