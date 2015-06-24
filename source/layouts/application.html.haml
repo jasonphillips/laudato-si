@@ -11,8 +11,9 @@
     #social
       %a.twitterLink(href="#" target="_blank")
         = image_tag url_for("twitter.png"), alt: 'Tweet this link'
+      %a.fbLink(href="#" target="_blank")
+        = image_tag url_for("facebook.png"), alt: 'Share on Facebook'
       = image_tag url_for("link.png"), alt: 'Link', :class => 'linkLink'
-      %input#currentUrl(type="text" name="link")
     = yield
     = javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js"
     = javascript_include_tag "application"

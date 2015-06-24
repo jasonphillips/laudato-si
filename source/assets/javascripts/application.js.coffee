@@ -2,17 +2,11 @@
 
 window.emphasisCallback = ()->
   thisURL = window.location.href
-  thisEnc = encodeURIComponent(thisURL)
-  $('#social input')
-  .attr
-    'value': thisURL
+  thisEnc = encodeURIComponent(thisURL+',x')
   $('#social .twitterLink').attr
     'href': "https://twitter.com/share?url=#{thisEnc}&text=%20&hashtags=LaudatoSi"
-  $('#social').show()
+  $('#social .fbLink').attr
+    'href': "http://www.facebook.com/sharer.php?u=#{thisEnc}"
   $('#social .linkLink').bind 'click', ()->
-    $('#social input')
-    .attr
-      'value': window.location.href
-    .show()
-    .focus()
-    .select()
+    prompt('Share this link:',window.location.href)
+  $('#social').show()
