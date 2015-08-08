@@ -3,6 +3,34 @@ body {
   color: #222;
   font-size:1.25em;
 }
+
+
+#social {
+    font-size: .5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: .75;
+    background-color: #eee;
+    padding: 5px;
+    display: none;
+    > * {
+      float:right;
+    }
+    img, .shareLink {
+      cursor: pointer;
+    }
+    .shareLink {
+      font-size: 2em;
+    }
+    #currentUrl {
+      margin-bottom: 0;
+      display: none;
+    }
+}
+
 .nosmall {
   display:none;
 }
