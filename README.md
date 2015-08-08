@@ -1,5 +1,3 @@
-## Note: this project will be primarily maintained at [encyclical/laudato-si](https://github.com/encyclical/laudato-si) going forward. 
-
 # Laudato Si’
 
 View the site on [Github Pages](http://encyclical.github.io/laudato-si/).
@@ -20,7 +18,7 @@ Improvements welcome via pull request.
 
 **To do:**
  - [ ] build yaml document structure for TOC
- - [ ] deep linking https://github.com/jasonphillips/laudato-si/issues/1
+ - [x] deep linking https://github.com/jasonphillips/laudato-si/issues/1
 
 **Welcome improvements:**
  - alternate languages
