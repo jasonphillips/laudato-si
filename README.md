@@ -2,7 +2,7 @@
 
 # Laudato Si’
 
-View the site on [Github Pages](http://jasonphillips.github.io/laudato-si/).
+View the site on [Github Pages](http://encyclical.github.io/laudato-si/).
 
 This site offers a mirror of the
 [official document](http://w2.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html) Laudato Si’ that is hosted on the Vatican site. All contents belong to Libreria Editrice Vaticana and are
@@ -41,4 +41,8 @@ $ middleman build
 # rebuild and deploy to gh-pages branch
 $ middleman deploy
 ```
+
+## Contributors
+
+- Jason Philips (@jasonphillips)
 
